@@ -11,12 +11,8 @@ export default class Calculator {
 
 	//Add number to input
 	addNumber(btnValue) {
-		let test = this.input.value;
 		if (+this.input.value === 0) return this.input.value = btnValue;
-		this.input.value += btnValue;
-		if (btnValue === '.' && isNaN(+this.input.value)) {
-			this.input.value = test;
-		}
+		return this.input.value += btnValue;
 	}
 
 	//Calculate percent
